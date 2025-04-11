@@ -753,6 +753,18 @@ span .desc{
     text-shadow: 0 0 5px var(--main-color), 0 0 10px var(--main-color);
     margin-right: 1rem; /* Add spacing between text and icons */
 }
+
+/* Leader highlight styling */
+.tab-grid.resume-box.experience .resume-item .leader {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.tab-grid.resume-box.experience .resume-item .leader-hilight {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
 /* Remove button styling */
 .btn-sci .btn {
     display: none; /* Hide the button */
@@ -1208,17 +1220,6 @@ summary,
     background: var(--main-color);
     border-radius: 50%;
     box-shadow: 0 0 10px var(--main-color);
-}
-
-/* Leader highlight styling */
-.tab-grid.resume-box.experience .resume-item .leader {
-    font-size: 1.6rem;
-    margin-top: 1rem;
-}
-
-.tab-grid.resume-box.experience .resume-item .leader-hilight {
-    color: var(--main-color);
-    font-weight: 600;
 }
 
 /* Active state */
