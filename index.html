@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- scroll reveal -->
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+    <!-- typed js -->
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
+     <!-- Background Music (autoplay loop) -->
+<audio id="bgMusic" loop>
+    <source src="https://drive.google.com/file/d/1JHhYOxdaSAeuTbByBk_NzxcEqmvRfI8N/view?pli=1" type="audio/mpeg">
+    <!-- <source src="Captain Claw - Level 1 Music Remastered.ogg" type="audio/ogg"> -->
+</audio>
+
+<!-- Click Sound (for interactions) -->
+<!-- <audio id="clickSound">
+    <source src="sounds/click.mp3" type="audio/mpeg">
+    <source src="sounds/click.ogg" type="audio/ogg">
+</audio> -->
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div class="loading-screen" id="loadingScreen">
+    <div class="verification-box">
+      <div class="verification-animation">
+        <div class="scan-line"></div>
+        <div class="screen-outline"></div>
+      </div>
+      <div class="verification-text">
+        <div class="verification-status">Verifying Display</div>
+        <div class="verification-message">Checking screen requirements...</div>
+      </div>
+      
+      <!-- Results -->
+      <div class="verification-success">
+        <div class="success-icon">✓</div>
+        <div class="success-message">Display is Compatible for Webpage!</div>
+      </div>
+      
+      <div class="verification-fail">
+        <div class="fail-icon">⚠</div>
+        <div class="fail-message">Sorry for the inconvenience!<br>Minimum width: 1200px</div>
+        <!-- <button class="continue-btn" id="continueBtn">Continue Anyway</button> -->
+      </div>
+    </div>
+  </div>
+    <!-- additional Section -->
+    
+    <!-- <i class="bx bx-menu" id="menu-icon"></i> -->
+   
+    
+    <!-- navigation section design-->
+    <nav class="nav">
+        <!-- <div class="music-control-wrapper">
+            <div class="music-trigger">
+                <i class='bx bx-music'></i>
+            </div>
+            <div class="music-control-panel">
+                <input type="range" id="volumeSlider" min="0" max="100" value="30">
+                <button id="muteBtn" class="mute-btn">
+                    <i class='bx bx-volume-full unmute-icon'></i>
+                    <i class='bx bx-volume-mute mute-icon'></i>
+                </button>
+            </div>
+        </div> -->
+        <span class="nav-text">
+            <span data-char="G" style="--char-index:0"></span>
+            <span data-char="o" style="--char-index:1"></span>
+            <span data-char=" " style="--char-index:2"></span>
+            <span data-char="t" style="--char-index:3"></span>
+            <span data-char="h" style="--char-index:4"></span>
+            <span data-char="r" style="--char-index:5"></span>
+            <span data-char="o" style="--char-index:6"></span>
+            <span data-char="u" style="--char-index:7"></span>
+            <span data-char="g" style="--char-index:8"></span>
+            <span data-char="h" style="--char-index:9"></span>
+            <span data-char=" " style="--char-index:10"></span>
+            <span data-char="t" style="--char-index:11"></span>
+            <span data-char="h" style="--char-index:12"></span>
+            <span data-char="i" style="--char-index:13"></span>
+            <span data-char="s" style="--char-index:14"></span>
+            <span data-char=" " style="--char-index:15"></span>
+            <span data-char="b" style="--char-index:16"></span>
+            <span data-char="o" style="--char-index:17"></span>
+            <span data-char="x" style="--char-index:18"></span>
+            <span data-char=" " style="--char-index:19"></span>
+            <span data-char="t" style="--char-index:20"></span>
+            <span data-char="o" style="--char-index:21"></span>
+            <span data-char=" " style="--char-index:22"></span>
+            <span data-char="s" style="--char-index:23"></span>
+            <span data-char="e" style="--char-index:24"></span>
+            <span data-char="e" style="--char-index:25"></span>
+            <span data-char=" " style="--char-index:26"></span>
+            <span data-char="m" style="--char-index:27"></span>
+            <span data-char="o" style="--char-index:28"></span>
+            <span data-char="r" style="--char-index:29"></span>
+            <span data-char="e" style="--char-index:30"></span>
+            <span data-char=" " style="--char-index:31"></span>
+            <span data-char="a" style="--char-index:32"></span>
+            <span data-char="b" style="--char-index:33"></span>
+            <span data-char="o" style="--char-index:34"></span>
+            <span data-char="u" style="--char-index:35"></span>
+            <span data-char="t" style="--char-index:36"></span>
+            <span data-char=" " style="--char-index:37"></span>
+            <span data-char="m" style="--char-index:38"></span>
+            <span data-char="e" style="--char-index:39"></span>
+        </span>
+        <ul class="nav-list">
+            <li class="active">
+                <i class='bx bx-home'></i>
+                <span class="tooltip">Home</span>
+            </li>
+            <li class="">
+                <i class='bx bx-user'></i>
+                <span class="tooltip">About</span>
+            </li>
+            <li class="">
+                <i class='bx bx-detail'></i>
+                <span class="tooltip">Resume</span>
+            </li>
+            <li class="">
+                <i class='bx bx-list-plus'></i>
+                <span class="tooltip">Additional</span>
+            </li>
+            <!-- <li class="">
+                <i class='bx bx-envelope'></i>
+                <span class="tooltip">Contact</span>
+            </li> -->
+        </ul>        
+    </nav>
+    <!-- <div class="language-selector">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn " data-lang="ml" style="font-family: 'Rachana', sans-serif;">മല</button>
+    
+    </div> -->
+    <div class="container">        
+        
+        <div class="box">
+             <!-- Home Section Design-->
+              <section class="section home active">
+                <!-- <div class="greeting-wrapper">
+                    <div class="greeting-container">
+                      <h2 class="greeting-static">Good</h2>
+                      <div class="greeting-roller">
+                        <span class="greeting-time">Morning,</span>
+                        <span class="greeting-time">Afternoon,</span>
+                        <span class="greeting-time">Evening,</span>
+                      </div>
+                    </div>
+                  </div> -->
+                <!-- <button id="tutorial-button" class="tutorial-start-btn" onclick="startTutorial">
+                    <i class='bx bx-info-circle'></i> Start Tutorial
+                </button> -->
+                <div class="home-info">
+                    <h3>Hello, my name is</h3>
+                    <h1>Joseph Salas</h1>
+                    <h3>And I'm 
+                        <span style="--i:6;" data-text="a Teacher">a Teacher</span>
+                        <span style="--i:5;" data-text="a Youtuber">a Youtuber</span>
+                        <span style="--i:4;" data-text="an Advanced Premier Pro Editor">an Advanced Premier Pro Editor</span>
+                        <span style="--i:3;" data-text="an Advanced Photoshop Editor">an Advanced Photoshop Editor</span>
+                        <span style="--i:2;" data-text="a Webpage Designer">a Webpage Designer</span>
+                        <span style="--i:1;" data-text="Adaptive to Technology">Adaptive to Technology</span>
+                    </h3>                  
+                    <!-- <span class="color-changing-text">View the website in Full in <br> Desktop View for Full Experience</span> -->
+                    <div class="btn-sci">
+                        <div class="social-media-text">My Social Platforms:</div>
+                        <div class="sci">
+                            <a href="https://www.linkedin.com/in/joseph-salas-61a9701ab/" target="_blank" rel="noopener noreferrer">
+                                <i class='bx bxl-linkedin'></i>
+                                <span class="tooltip">LinkedIn</span>
+                            </a>
+
+                            <!-- <a href="https://github.com/Joseph-Salas-79" target="_blank" rel="noopener noreferrer">
+                                <i class='bx bxl-github'></i>
+                                <span class="tooltip">Github</span>
+                            </a> -->                            
+                            <!-- <a href="#">
+                                <i class='bx bxl-twitter'></i>
+                                <span class="tooltip">X</span>
+                            </a> -->
+                            <!-- <a href="#">
+                                <i class='bx bxl-youtube'></i>
+                                <span class="tooltip">YouTube</span>
+                            </a> -->
+                        </div>
+                    </div>
+                    
+                    <!-- <div class="home-message">
+                        <span class="home-message-text" style="--i:1;" data-text="I am sure this additional webpage will lead you through somethings about me.">I am sure this additional webpage will lead you through somethings about me.</span>
+                        <span class="home-message-text" style="--i:2;" data-text=" The icons in round edge rectangle will lead you through the additional."> The icons in round edge rectangle will lead you through the additional.</span>
+                    </div> -->
+                    <br>
+                    
+                </div>
+                              
+                <div class="ing-wrapper">
+                    <div class="img-box home-img">
+                        <img src="image.png" alt="">
+                    </div>
+                </div>
+              </section>
+
+              <!-- About Section Design-->
+               <section class="section about">
+                <div class="ing-wrapper">
+                    <!-- <div class="img-box about-img">
+                        <img src="image.png" alt="">
+                    </div> -->
+                </div>
+                <div class="about-info">
+                    <h3 class="title">About <span>Me</span></h3>
+                    <details class="desc">
+                        <summary>Click to View About Me</summary>
+                        <br>
+                        <p>I am a dedicated teacher with a passion for educating and inspiring students, and same with different types of technology. In addition to my teaching expertise, I have skills in basic webpage designing and video and photo editing, allowing me to create engaging and visually appealing content.</p>
+                        <br>
+                        <p><span>Go ahead to see more about me!</span></p>
+                    </details>
+                    <!-- <a href="#" class="btn">View More</a> -->
+                </div>
+               </section>
+
+               <!-- Resume Section -->
+                <section class="section resume">
+                    <h2 class="title">My <span>Resume</span></h2>
+                    <div class="tab-box">
+                        <!-- Main Titles -->
+                        <div class="tab-list resume-list active">
+                            <h3>Experience</h3>                            
+                        </div>
+                        <div class="tab-list resume-list">
+                            <h3>Skills</h3>                            
+                        </div>
+                        <div class="tab-list resume-list">
+                            <h3>Education</h3>                            
+                        </div>                        
+                    </div>
+                    <div class="tab-wrapper">
+                        <!-- Experience Tab -->
+                        <div class="tab-grid resume-box experience active">
+                            <!-- Experience -->
+                            <div class="tab-item resume-item">
+                                <h4>2023 - 2024</h4>
+                                <h4>Teacher Trainee</h4>
+                                <h4>Govt. HS, Koovakkavu</h4>
+                                <p class="leader"><span class="leader-hilight">Head of Institute: </span>N/A (Trasfered the same time)</p>                
+                            </div>
+                            <div class="tab-item resume-item">
+                                <h4>2023 - 2024</h4>
+                                <h4>Teacher Trainee</h4>
+                                <h4>Govt. NS LPS, Thekkethukavala</h4>
+                                <p class="leader"><span class="leader-hilight">Head of Institute: </span>Muhammad Faisal (Retired the same year)</p>
+                            </div>
+                            
+                                <!-- Existing items will be here -->
+                                <!-- <div class="add-item-container">
+                                    <button class="add-item-btn" data-section="experience">
+                                        <i class='bx bx-plus-circle'></i>
+                                        Add Experience
+                                    </button>
+                                </div> -->
+                            
+                            <!-- Repeat for More -->
+                        </div>
+
+                        <!-- Skills Section -->
+                        <div class="tab-grid resume-box skills">
+                            <div class="about-skills">
+                                <!-- <h2 class="title2">Professional Skills</h2> -->
+                                <div class="skills-container">
+                                    <!-- Programming Skills -->
+                                    <div class="software-skill-progress">
+                                        <h3>Software Skills</h3>
+                                        <div class="tab-item resume-item">
+                                            <div class="software-skill-icon software-icon">
+                                                <h4>Internet Explorer</h4>
+                                                <div class="skill-icon"><i class='bx bxl-internet-explorer'></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="95" data-max="100">
+                                                <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <div class="tab-item resume-item">
+                                            <div class="software-skill-icon software-icon">
+                                                <h4>Adobe Premier Pro</h4>
+                                                <div class="skill-icon"><i class='bx bxs-videos'></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="85" data-max="100">
+                                                <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>
+                                        </div>                                    
+                                        <div class="tab-item resume-item">
+                                            <div class="software-skill-icon software-icon">
+                                                <h4>Adobe Photoshop</h4>
+                                                <div class="skill-icon"><i class='bx bxs-camera' ></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="85" data-max="100">
+                                                <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-item resume-item">
+                                            <div class="software-skill-icon software-icon">
+                                                <h4>HTML5</h4>
+                                                <div class="skill-icon"><i class='bx bxl-html5'></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="75" data-max="100">
+                                                <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-item resume-item">
+                                            <div class="software-skill-icon software-icon">
+                                                <h4>CSS3</h4>
+                                                <div class="skill-icon"><i class='bx bxl-css3'></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="50" data-max="100">
+                                                <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        
+                                        <!-- <div class="add-item-container">
+                                            <button class="add-item-btn" data-section="skills" data-skill-type="software">
+                                                <i class='bx bx-plus-circle'></i>
+                                                Add Software Skill
+                                            </button>
+                                        </div>                                -->
+                                        <!-- Repeaat to Add More -->
+                                    </div>                                    
+                            
+                                    <!-- General Skills -->
+                                    <div class="general-skill-progress">
+                                        <h3>General Skills</h3>
+                                        <div class="tab-item resume-item">
+                                            <div class="general-skill-icon skill-icon">
+                                                <h4>Driving</h4>
+                                                <div class="skill-icons"><i class='bx bxs-car' ></i>&<i class="ri-motorbike-fill"></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="95" data-max="100">
+                                                 <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <div class="tab-item resume-item">
+                                            <div class="general-skill-icon skill-icon">
+                                                <h4>Technologies</h4>
+                                                <div class="skill-icons"><i class='bx bx-compass'></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="95" data-max="100">
+                                                 <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <div class="tab-item resume-item">
+                                            <div class="general-skill-icon skill-icon">
+                                                <h4>Teaching</h4>
+                                                <div class="skill-icons"><i class='bx bx-chalkboard'></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="90" data-max="100">
+                                                 <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <div class="tab-item resume-item">
+                                            <div class="general-skill-icon skill-icon">
+                                                <h4>Communication</h4>
+                                                <div class="skill-icons"><i class='bx bxs-chat'></i></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="50" data-max="100">
+                                                 <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        <div class="tab-item resume-item">
+                                            <div class="general-skill-icon skill-icon">
+                                                <h4>Swimming</h4>
+                                                <div class="skill-icons"><i class='bx bx-swim' ></i></div>
+                                            </div>
+                                            <div class="loading-bar-container" data-value="25" data-max="100">
+                                                 <div class="loading-bar-progress">
+                                                    <div class="loading-bar-shine"></div>
+                                                    <span class="loading-bar-text"></span>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        
+                                            <!-- Existing items will be here -->
+                                            <!-- <div class="add-item-container">
+                                                <button class="add-item-btn" data-section="skills" data-skill-type="general">
+                                                    <i class='bx bx-plus-circle'></i>
+                                                    Add General Skill
+                                                </button>
+                                            </div> -->
+                                        <!-- Repeaat to Add More -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Education Tab -->
+                        <div class="tab-grid resume-box education">
+                            <div class="tab-item resume-item">
+                                <h4>2024 - Present</h4>
+                                <h4>Master of Arts in English Language and Literature (MA English)</h4>
+                                <h4>Sree Narayana Guru Open University (SGOU), Kollam</h4>                            
+                            </div>
+                            <div class="tab-item resume-item">
+                                <h4>2022 - 2024</h4>
+                                <h4>Diploma in Elementary Education (D.El.Ed)</h4>
+                                <h4>DIET (DISTRICT INSTITUTE OF EDUCATION & TRAINING) Kottayam, Vellor</h4>                            
+                            </div>
+                            <div class="tab-item resume-item">
+                                <h4>2019 - 2022</h4>
+                                <h4>Bachelor of Arts in English Language and Literature (BA English)</h4>
+                                <h4>St. Dominic's College, Kanjirappally</h4>                            
+                            </div>
+                            <div class="tab-item resume-item">
+                                <h4>2017 - 2019</h4>
+                                <h4>Computer Science (Twelfth)</h4>
+                                <h4>St. Thomas HSS, Erumely</h4>                            
+                            </div>
+                            
+                                <!-- Existing items will be here -->
+                                <!-- <div class="add-item-container">
+                                    <button class="add-item-btn" data-section="education">
+                                        <i class='bx bx-plus-circle'></i>
+                                        Add Education
+                                    </button>
+                                </div> -->
+                            <!-- Repeat For More -->
+                        </div>
+                    </div>                            
+                </section>
+                <!-- additional (Work, Service) Section -->
+                <section class="section additional ">
+                    <h2 class="title">Additional About <span>Me</span></h2>
+                    <div class="tab-box">
+                        <!-- <div class="tab-list additional-list active">
+                            <h3>Events I participated</h3>
+                        </div> -->
+                        <div class="tab-list additional-list active">
+                            <h3>Organizations I'm In</h3>
+                        </div>
+                        <div class="tab-list additional-list ">
+                            <h3>Languages I Know</h3>
+                        </div>
+                    </div>
+                    <div class="tab-wrapper">
+                        <!-- Experience Section -->
+                        <!-- <div class="tab-grid additional-box work active"> -->
+                            <!-- Work Section -->
+                            <!-- <h6 style="align-content: center; margin-left: 60rem; font-size: xx-large;">Coming Soon..</h6> -->
+                            <!-- <div class="tab-item additional-item">                                 -->
+                                <!-- <div class="work-img">
+                                    <img src="work1.jpg" alt="">
+                                </div> -->
+                                <!-- <div class="tab-item resume-item">
+                                    <h4>2023</h4>
+                                    <h4>Teacher Trainee</h4>
+                                    <h4>Govt. HS, Koovakkavu</h4>
+                                    <p class="leader"><span class="leader-hilight">Head of Institute: </span>N/A (Trasfered the same time)</p>
+                                </div>
+                                <div class="additional-icon work-icon">
+                                    <a href="#">
+                                        <i class='bx bx-arrow-back'></i>
+                                        <span class="tooltip">Preview</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class='bx bxl-github'></i>
+                                        <span class="tooltip">Github Repository</span>
+                                    </a>
+                                    <a href="#">
+                                        <i class='bx bxs-map' ></i>
+                                        <span class="tooltip">Location</span>
+                                    </a>
+                                </div> -->
+                                <!-- <div class="work-info">
+                                    <h4>Curiculum</h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio rem consectetur, ea placeat pariatur quas quo distinctio assumenda. Provident ratione excepturi in quasi dolorem deserunt quaerat? Rem ipsa laboriosam perspiciatis.</p>
+                                    <div class="tech-used">
+                                        <p>HTML5, CSS3, JavaScript</p>
+                                    </div>
+                                     -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                        <!-- </div>                                          -->
+                            <!-- Repeat for other additional items -->
+                        <!-- </div> -->
+
+                        <!-- Organisations Section -->
+                        <div class="tab-grid additional-box org active">
+                            <!-- <h6 style="align-content: center; margin-left: 60rem; font-size: xx-large;">Coming Soon..</h6> -->
+                            <div class="additional-item">
+                                <!-- Organization Logo at top left -->
+                                <div class="org-logo">
+                                    <img src="jy.png" alt="Jesus Youth Logo">
+                                </div>
+                                
+                                <!-- Organization Name and External Link (same line) -->
+                                <div class="org-header">
+                                    <h4>JY (Jesus Youth)</h4>
+                                    <a href="https://jesusyouth.org/" target="_blank" rel="noopener noreferrer" class="external-link">
+                                        <i class='bx bx-link-external'></i>
+                                    </a>
+                                </div>
+                                
+                                <!-- Description below -->
+                                <p>Jesus Youth is an international Catholic movement that challenges young people to live a meaningful, creative, and fulfilling life...</p>
+                            </div>
+                            <div class="additional-item">
+                                <!-- Organization Logo at top left -->
+                                <div class="org-logo">
+                                    <img src="smym.png" alt="Jesus Youth Logo">
+                                </div>
+                                
+                                <!-- Organization Name and External Link (same line) -->
+                                <div class="org-header">
+                                    <h4>SMYM (Syro Malabar Youth Moment)</h4>
+                                    <a href="https://kanjirapallydiocese.com/pastoral-organizations/syro-malabar-youth-movement/" target="_blank" rel="noopener noreferrer" class="external-link">
+                                        <i class='bx bx-link-external'></i>
+                                    </a>
+                                </div>
+                                
+                                <!-- Description below -->
+                                <p>Syro Malabar Youth Movement (SMYM) is the official youth movement of the Syro Malabar Church. SMC has more than 1.6 million catholic youth scattered all over the world. The SMYM champions and lives out its mission to follow the tradition and beliefs of the Syro Malabar Church for the Kingdom of God and Society, to strive for the integral development of the youth and to bind together the youth of the SMC. SMYM has various programmes and activities for the holistic development of youth aligning its members with the religious and social causes of the Church including Campus programmes against substance abuse and formation of de-addiction clubs on campuses.</p>
+                            </div>
+                            <!-- <div class="add-item-container">
+                                <button class="add-item-btn" data-section="org">
+                                    <i class='bx bx-plus-circle'></i>
+                                    Add Organization
+                                </button>
+                            </div> -->
+                        </div>
+                        
+                        <!-- Languages Section -->
+                        <div class="tab-grid additional-box lang ">                
+                            <div class="tab-item additional-item">
+                                <h4></h4>
+                                <h4 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 'Rachana', sans-serif;">മലയാളം</h4>
+                                <div class="loading-bar-container" data-value="98" data-max="100">
+                                    <div class="loading-bar-progress">
+                                        <div class="loading-bar-shine"></div>
+                                        <span class="loading-bar-text"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item additional-item">
+                                <h4></h4>
+                                <h4>English</h4>
+                                <div class="loading-bar-container" data-value="98" data-max="100">
+                                    <div class="loading-bar-progress">
+                                        <div class="loading-bar-shine"></div>
+                                        <span class="loading-bar-text"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item additional-item">
+                                <h4></h4>
+                                <h4 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', 'Hind Madurai', sans-serif;">தமிழ்</h4>
+                                <div class="loading-bar-container" data-value="50" data-max="100">
+                                    <div class="loading-bar-progress">
+                                        <div class="loading-bar-shine"></div>
+                                        <span class="loading-bar-text"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item additional-item">
+                                <h4></h4>
+                                <h4>हिंदी</h4>
+                                <div class="loading-bar-container" data-value="30" data-max="100">
+                                    <div class="loading-bar-progress">
+                                        <div class="loading-bar-shine"></div>
+                                        <span class="loading-bar-text"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                <!-- Existing items will be here -->
+                                <!-- <div class="add-item-container">
+                                    <button class="add-item-btn" data-section="lang">
+                                        <i class='bx bx-plus-circle'></i>
+                                        Add Language
+                                    </button>
+                                </div> -->
+                            
+                            <!-- Repeat to Add More                    -->
+                        </div>                       
+                    </div>
+                </section>
+                
+                <!-- Contact Section -->
+                <!-- <section class="section contact"> -->
+                    <!-- <h2 class="title">Contact <span>Me</span></h2> -->
+                    <!-- <div class="contact-wrapper"> -->
+                        <!-- <div class="contact-form"> -->
+                            <!-- <h2>Connect with Me</h2> -->
+                            <!-- <p class="desc">Reach me through here only if there is </p>                                          -->
+                            <!-- <div class="contact-detail">
+                                <i class='bx bxs-phone'></i>
+                                <div class="details">
+                                    <p>Phone</p>
+                                    <p>+91 1234567890</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail">                       
+                                <i class='bx bxs-envelope'></i>
+                                <div class="details">
+                                    <p>Email</p>
+                                    <p>myemail@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="contact-detail">
+                                <i class='bx bxs-map'></i>
+                                <div class="details">
+                                    <p>Address</p>
+                                    <p>Any Address</p>
+                                 </div>
+                            </div>-->
+                        <!-- </div> -->
+                        
+                        <!-- <div class="contact-box"> -->
+                        <!-- <form action="contactForm" class="contact-form">
+                            <h3><span>Message Me</span></h3>
+                            <div class="field-box">
+                                <input type="text" placeholder="Your Full Name" required>
+                                <input type="email" placeholder="Your Email" required>
+                                <input type="text" placeholder="Your Phone Number" required>
+                                <input type="text" placeholder="Email Subject" required>
+                                <textarea name="" id="" placeholder="Your Message" required></textarea>
+                            </div>
+                            <div class="contact-btn">
+                                <button type="submit" class="btn">Send Message</button>
+                            </div>       
+                        </form> -->
+                        <!-- </div>                         -->
+                    <!-- </div> -->
+                <!-- </section> -->
+        </div>
+    </div>
+
+  
+   
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- Tutorial System Elements -->
+<!-- Tutorial System Elements -->
+<div class="tutorial-overlay" id="tutorial-overlay"></div> 
+<!-- Copy Protection Overlay -->
+<div class="copy-protection-overlay" id="copyProtectionOverlay">
+    <div class="copy-protection-warning" id="copyProtectionWarning">
+        Content copying is disabled!
+    </div>
+</div>
+<!-- Visitor Message Modal -->
+<!-- <div id="visitorModal" class="visitor-modal">
+    <div class="visitor-modal-content">
+        <span class="close-modal">&times;</span>
+        <i class='bx bx-lock-alt modal-icon'></i>
+        <h3>Admin Access Required</h3>
+        <p>Only the owner of this webpage can add or edit content.</p>
+        <p>If you're a visitor, feel free to explore the Portfolio.</p>
+        <button id="goToLoginBtn" class="modal-login-btn">
+            <i class='bx bx-log-in'></i> Go to Login
+        </button>
+    </div>
+</div> -->
+</body>
+<!--footer section design-->
+    <footer>        
+        <p>Copyright &copy; 2025 Joseph Salas | All Copyrights Reserved</p>      
+    </footer>
+    <!-- Tutorial System Elements -->   
+</html>
